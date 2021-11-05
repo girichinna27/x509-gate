@@ -15,7 +15,7 @@ namespace=$1
 sed -i 's/NAMESPACE/'$namespace'/g' *.yml
 
 echo "---Creating Cluster Issuer----"
-kubectl apply -f clusterissuer.yml
+kubectl apply -f clusterissuer.yml -n $namespace
 
 
 echo "---Creating CACert----"
